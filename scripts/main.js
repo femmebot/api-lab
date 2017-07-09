@@ -1,9 +1,13 @@
+var output = document.getElementById('output');
+
 function myFunction(){
-  console.log(this.responseText);
+  if(this.readystate == 4 && this.status == 200){
+    output.innerHTML = this.responseText;
+  }
 }
 
 var myRequest = new XMLHttpRequest();
-myRequest.addEventListener("load", myFunction);
+myRequest.onreadystatechange = myFunction;
 myRequest.open("GET", "api.py");
 myRequest.send();
 console.log(myRequest);
