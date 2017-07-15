@@ -8,6 +8,6 @@ function myFunction(){
 
 var myRequest = new XMLHttpRequest();
 myRequest.onreadystatechange = myFunction;
-myRequest.open("GET", "api.py");
+myRequest.open("GET", "../api.php");
 myRequest.send();
 console.log(myRequest);
