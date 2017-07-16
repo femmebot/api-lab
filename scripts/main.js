@@ -1,4 +1,4 @@
-var output = document.getElementById('output');
+var output = document.getElementById("output");
 
 function myFunction(){
   if(this.readystate == 4 && this.status == 200){
